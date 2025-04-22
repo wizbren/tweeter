@@ -24,4 +24,5 @@ nav {
 .write-a-tweet i {
   display: block;
   margin-top: 4px;
+  color: red;
 }
