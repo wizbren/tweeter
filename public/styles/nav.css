@@ -1,0 +1,27 @@
+
+
+nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding-left: 1.5em;       /*Could combine into <padding: 0 1.5em for DRYness*/
+  padding-right: 1.5em;
+  font-family: 'Bungee', sans-serif;
+}
+
+nav span {
+  font-family: 'Bungee', sans-serif;
+}
+
+
+.write-tweet {
+  text-align: center;
+  font-size: 0.9em;
+  line-height: 1.2;
+}
+
+.write-tweet i {
+  display: block;
+  margin-top: 4px;
+}
