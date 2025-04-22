@@ -1,0 +1,21 @@
+header {
+  width: 100%;
+  background-color: beige; 
+  background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 0;
+  text-align: center;
+}
+
+header img {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+}
+
+header h2 {
+  margin: 0.5em 0 0;
+}
