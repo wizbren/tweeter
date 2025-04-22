@@ -8,6 +8,10 @@ nav {
   padding-left: 1.5em;       /*Could combine into <padding: 0 1.5em for DRYness*/
   padding-right: 1.5em;
   font-family: 'Bungee', sans-serif;
+
+  display: flex;             /*Sets nav bar elements side-by-side, instead of vertically stacked*/
+  align-items: center;
+  justify-content: space-between;  /*Pushes "TWEETER?!" and "Write a New Tweet" to opposite sides*/
 }
 
 nav span {
@@ -15,13 +19,13 @@ nav span {
 }
 
 
-.write-tweet {
+.write-a-tweet {
   text-align: center;
   font-size: 0.9em;
   line-height: 1.2;
 }
 
-.write-tweet i {
+.write-a-tweet i {
   display: block;
   margin-top: 4px;
 }
