@@ -14,6 +14,10 @@
   background-color: deepskyblue;
 }
 
+.new-tweet button:hover {
+  background-color: skyblue;
+}
+
 .new-tweet form label {
   display: block;
   margin-bottom: 0.5em;
