@@ -1,0 +1,26 @@
+
+
+.new-tweet {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.new-tweet button {
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  cursor: pointer;
+  color: white;
+  background-color: deepskyblue;
+}
+
+.new-tweet form label {
+  display: block;
+  margin-bottom: 0.5em;
+  border-bottom: 2px solid;
+  padding-bottom: 0.5em;
+  font-weight: bold;
+}
