@@ -4,13 +4,10 @@
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  padding: 1em;
 }
 
 .new-tweet button {
   border: none;
-  border-radius: 5px;
-  padding: 0.5em 1em;
   font-size: 1em;
   cursor: pointer;
   color: white;
@@ -22,5 +19,15 @@
   margin-bottom: 0.5em;
   border-bottom: 2px solid;
   padding-bottom: 0.5em;
-  font-weight: bold;
+}
+
+.new-tweet form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5em;
+}
+
+.counter {
+  margin-left: auto;
 }

@@ -17,7 +17,6 @@ nav {
   justify-content: space-between;  /*Pushes "TWEETER?!" and "Write a New Tweet" to opposite sides*/
 }
 
-
 .write-a-tweet {
   text-align: center;
   font-size: 0.9em;
@@ -28,4 +27,17 @@ nav {
   display: block;
   margin-top: 4px;
   color: red;
+}
+
+.new-tweet form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5em;
+}
+
+.counter {
+  margin-left: auto;
+  font-size: 0.8em;
+  color: #555;
 }
