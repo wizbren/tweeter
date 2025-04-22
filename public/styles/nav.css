@@ -14,10 +14,6 @@ nav {
   justify-content: space-between;  /*Pushes "TWEETER?!" and "Write a New Tweet" to opposite sides*/
 }
 
-nav span {
-  font-family: 'Bungee', sans-serif;
-}
-
 
 .write-a-tweet {
   text-align: center;
