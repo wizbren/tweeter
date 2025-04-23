@@ -28,16 +28,3 @@ nav {
   margin-top: 4px;
   color: red;
 }
-
-.new-tweet form div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 0.5em;
-}
-
-.counter {
-  margin-left: auto;
-  font-size: 0.8em;
-  color: #555;
-}
