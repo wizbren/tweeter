@@ -35,3 +35,7 @@
 .counter {
   margin-left: auto;
 }
+
+.counter.over-limit {
+  color: red;
+}
