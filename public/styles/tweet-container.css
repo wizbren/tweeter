@@ -1,6 +1,6 @@
 #tweet-container {
   width: 100%;
-  max-width: 600px;
+  max-width: 750px;     /*25% wider than last version*/
   margin: 2em auto;
   font-family: 'Source Sans 3', sans-serif;
 }
@@ -24,8 +24,8 @@
 }
 
 .tweet header img {
-  height: 32px;
-  width: 32px;
+  height: 48px;         /*50% larger than last version*/
+  width: 48px;          /*50% larger than last version*/
   margin-right: 0.5em;
 }
 
@@ -37,6 +37,7 @@
 .user-handle {
   font-weight: bold;
   color: gray;
+  font-size: 0.85em;    /*15% smaller from last version*/
 }
 
 .tweet p {
@@ -51,10 +52,11 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 0.5em;
-  font-size: 0.9em;
+  font-size: 0.7em;     /*~30% smaller than last version*/
   color: gray;
 }
 
 .tweet footer div i {
   margin-left: 10px;
+  font-size: 0.9em;     /*reduce icon size 10% of footer*/
 }
