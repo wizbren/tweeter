@@ -1,6 +1,6 @@
 #tweet-container {
   width: 100%;
-  max-width: 750px;     /*25% wider than last version*/
+  max-width: 750px;     
   margin: 2em auto;
   font-family: 'Source Sans 3', sans-serif;
 }
@@ -13,9 +13,11 @@
 }
 
 .tweet header {
+  all: unset;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 0.5em;
 }
 
 .tweet header > div {
@@ -24,9 +26,9 @@
 }
 
 .tweet header img {
-  height: 48px;         /*50% larger than last version*/
-  width: 48px;          /*50% larger than last version*/
-  margin-right: 0.5em;
+  height: 60px;         
+  width: 60px;          
+  margin-right: 0.2em;  
 }
 
 .tweet header span {
@@ -35,9 +37,11 @@
 }
 
 .user-handle {
+  align-self: flex-start;
   font-weight: bold;
+  font-size: 0.85em;    
   color: gray;
-  font-size: 0.85em;    /*15% smaller from last version*/
+  margin-top: 0.2em;
 }
 
 .tweet p {
@@ -52,11 +56,11 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 0.5em;
-  font-size: 0.7em;     /*~30% smaller than last version*/
+  font-size: 0.7em;     
   color: gray;
 }
 
 .tweet footer div i {
   margin-left: 10px;
-  font-size: 0.9em;     /*reduce icon size 10% of footer*/
+  font-size: 0.9em;     
 }
