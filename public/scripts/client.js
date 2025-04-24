@@ -15,6 +15,7 @@ $(document).ready(function() {   //Select tweet form, listen for submit event
   });
 });
 
+/*Function to keep track of when tweets were created*/
 function timeSince(timestamp) {
   const seconds = Math.floor((Date.now() - timestamp) / 1000);
   const hours = Math.floor(seconds / 3600);
@@ -59,6 +60,16 @@ const createTweetElement = function(tweet) {
   return $tweet;      //Returns jQuery tweet element
 };
 
+/*Function to render tweets server-side, and then clear container*/
+const renderTweets = function(tweets) {
+  const $container = $('#tweet-container');
+  $container.empty();
+
+  for (const tweet of tweets) {
+    const $tweetElement = createTweetElement(tweet);  //Builds tweet element
+    $container.prepend($tweetElement);
+  }
+}
 
 
 
