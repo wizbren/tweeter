@@ -2,14 +2,25 @@ $(document).ready(function() {   //Select tweet form, listen for submit event
   
   $('form').on('submit', function(event) {  //Halts default browser behaviour of reloading
     event.preventDefault();                 //on form submission
+    const tweetText = $('textarea').val();  //Get tweet from textarea
+    const maxText = 140;                    //Maximum characters allowed
+
+    if (tweetText === "") {                //Check for empty textarea
+      alert("You can't send an empty tweet!");
+      return;                               //Prevents form submit
+    }
+    if (tweetText.length > maxText) {       //Checks if tweet is below 140 chars
+      alert("Your tweet is too long! 140 characters or less, please."); 
+      return;                               //Prevents form submit
+    }
 
     const serializedData = $(this).serialize();  //Serialize form data into query string
 
     $.post('/api/tweets', serializedData)   //Send serialized data to server through POST req
       .done(function(response) {
         console.log('Success!', response);
-        loadTweets();
-        $('textarea').val('');
+        loadTweets();                       //Reload tweets after posting
+        $('textarea').val('');              //Clear textarea on success
       })
       .fail(function(error) {
         console.error('Failed...', error);
