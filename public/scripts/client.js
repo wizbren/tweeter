@@ -58,6 +58,20 @@ const renderTweets = function(tweets) {
   }
 }
 
+/*Function to keep track of when tweets were created*/
+function timeSince(timestamp) {
+  const seconds = Math.floor((Date.now() - timestamp) / 1000);
+  const hours = Math.floor(seconds / 3600);
+
+  if (hours < 1) {
+    return 'less than an hour ago';
+  }
+  if (hours === 1) {
+    return '1 hour ago';
+  }
+  return hours + ' hours ago';
+}
+
 
 const data = [
   {
@@ -88,16 +102,3 @@ renderTweets(data);
 
 
 
-/*Function to keep track of when tweets were created*/
-/*function timeSince(timestamp) {
-  const seconds = Math.floor((Date.now() - timestamp) / 1000);
-  const hours = Math.floor(seconds / 3600);
-
-  if (hours < 1) {
-    return 'less than an hour ago';
-  }
-  if (hours === 1) {
-    return '1 hour ago';
-  }
-  return hours + ' hours ago';
-}*/
