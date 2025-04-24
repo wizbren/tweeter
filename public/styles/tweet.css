@@ -1,0 +1,69 @@
+.tweet {
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 0.8em;
+  background-color: palegoldenrod;
+}
+
+.tweet header {
+  all: unset;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5em;
+}
+
+.tweet header > div {
+  display: flex;
+  align-items: flex-start;
+}
+
+.tweet header img {
+  height: 60px;         
+  width: 60px;          
+  margin-right: 0.2em;  
+}
+
+.tweet header span {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.tweet header .user-handle {
+  align-self: flex-start;
+  font-weight: bold;
+  font-size: 0.8em;    
+  color: gray;
+  margin-top: 1px;
+}
+
+.tweet p {
+  text-align: left;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.5em;
+  margin: 1em 0 0.5em 0;
+}
+
+.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5em;
+  font-size: 0.7em;     
+  color: gray;
+}
+
+.tweet footer div i {
+  margin-left: 10px;
+  font-size: 0.9em;     
+}
+
+.tweet footer div i:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: grey;
+}
+
+.tweet:hover {
+  box-shadow: 3px 3px 7px dimgray;     /*Revisit this*/
+}
