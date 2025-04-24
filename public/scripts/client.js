@@ -62,10 +62,10 @@ const createTweetElement = function(tweet) {
 
 /*Function to render tweets server-side, and then clear container*/
 const renderTweets = function(tweets) {
-  const $container = $('#tweet-container');
-  $container.empty();
+  const $container = $('#tweet-container');           //Pulls what's written in tweet container
+  $container.empty();                                 //Clears input form
 
-  for (const tweet of tweets) {
+  for (const tweet of tweets) {                       //Loops through tweet data
     const $tweetElement = createTweetElement(tweet);  //Builds tweet element
     $container.prepend($tweetElement);
   }
