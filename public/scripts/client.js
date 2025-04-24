@@ -9,6 +9,7 @@ $(document).ready(function() {   //Select tweet form, listen for submit event
       .done(function(response) {
         console.log('Success!', response);
         loadTweets();
+        $('textarea').val('');
       })
       .fail(function(error) {
         console.error('Failed...', error);
