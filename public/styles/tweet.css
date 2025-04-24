@@ -60,8 +60,7 @@
 
 .tweet footer div i:hover {
   cursor: pointer;
-  transform: scale(1.1);
-  color: grey;
+  color: firebrick;
 }
 
 .tweet:hover {
