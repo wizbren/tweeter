@@ -15,19 +15,6 @@ $(document).ready(function() {   //Select tweet form, listen for submit event
   });
 });
 
-/*Function to keep track of when tweets were created*/
-function timeSince(timestamp) {
-  const seconds = Math.floor((Date.now() - timestamp) / 1000);
-  const hours = Math.floor(seconds / 3600);
-
-  if (hours < 1) {
-    return 'less than an hour ago';
-  }
-  if (hours === 1) {
-    return '1 hour ago';
-  }
-  return hours + ' hours ago';
-}
 
 /*Function to build and return tweets*/
 const createTweetElement = function(tweet) {
@@ -74,21 +61,18 @@ const renderTweets = function(tweets) {
 
 
 
-/*// TEST / driver code (temporary). Eventually will get this from the server.
-const tweetData = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-  "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-  "created_at": 1461116232227
-}
 
-const $tweet = createTweetElement(tweetData);
 
-// Test / driver code (temporary)
-console.log($tweet); // to see what it looks like
-$('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.*/
+/*Function to keep track of when tweets were created*/
+/*function timeSince(timestamp) {
+  const seconds = Math.floor((Date.now() - timestamp) / 1000);
+  const hours = Math.floor(seconds / 3600);
+
+  if (hours < 1) {
+    return 'less than an hour ago';
+  }
+  if (hours === 1) {
+    return '1 hour ago';
+  }
+  return hours + ' hours ago';
+}*/
