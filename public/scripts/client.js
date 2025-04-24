@@ -37,7 +37,7 @@ $(document).ready(function() {   //Select tweet form, listen for submit event
 
 /*Function to build and return tweets*/
 const createTweetElement = function(tweet) {
-  const howLongAgo = timeSince(tweet.created_at);
+  const howLongAgo = timeago.format(tweet.created_at);
 
   const $tweet = $(`
     <article class="tweet">
@@ -75,18 +75,4 @@ const renderTweets = function(tweets) {
     const $tweetElement = createTweetElement(tweet);  //Builds tweet element
     $container.prepend($tweetElement);
   }
-}
-
-/*Function to keep track of when tweets were created*/
-function timeSince(timestamp) {
-  const seconds = Math.floor((Date.now() - timestamp) / 1000);
-  const hours = Math.floor(seconds / 3600);
-
-  if (hours < 1) {
-    return 'less than an hour ago';
-  }
-  if (hours === 1) {
-    return '1 hour ago';
-  }
-  return hours + ' hours ago';
 }
