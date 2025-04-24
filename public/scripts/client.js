@@ -16,6 +16,21 @@ $(document).ready(function() {   //Select tweet form, listen for submit event
 });
 
 
+function loadTweets() {
+  $.ajax({
+    url: '/api/tweets',
+    method: 'GET',
+    dataType: 'json',
+    success: function(tweets) {
+      renderTweets(tweets);
+    },
+    error: function(err) {
+      console.error('Error: Unable to fetch tweets:', err);
+    }
+  })
+  loadTweets();
+}
+
 /*Function to build and return tweets*/
 const createTweetElement = function(tweet) {
   const howLongAgo = timeSince(tweet.created_at);
@@ -71,8 +86,3 @@ function timeSince(timestamp) {
   }
   return hours + ' hours ago';
 }
-
-function loadTweets
-
-
-renderTweets(data);
