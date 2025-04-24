@@ -8,28 +8,31 @@ $(document).ready(function() {   //Select tweet form, listen for submit event
     $.post('/api/tweets', serializedData)   //Send serialized data to server through POST req
       .done(function(response) {
         console.log('Success!', response);
+        loadTweets();
       })
       .fail(function(error) {
         console.error('Failed...', error);
       })
   });
+
+  function loadTweets() {
+    $.ajax({
+      url: '/api/tweets',
+      method: 'GET',
+      dataType: 'json',
+      success: function(tweets) {
+        renderTweets(tweets);
+      },
+      error: function(err) {
+        console.error('Error: Unable to fetch tweets:', err);
+      }
+    })
+  }
+  loadTweets();
 });
 
 
-function loadTweets() {
-  $.ajax({
-    url: '/api/tweets',
-    method: 'GET',
-    dataType: 'json',
-    success: function(tweets) {
-      renderTweets(tweets);
-    },
-    error: function(err) {
-      console.error('Error: Unable to fetch tweets:', err);
-    }
-  })
-  loadTweets();
-}
+
 
 /*Function to build and return tweets*/
 const createTweetElement = function(tweet) {
