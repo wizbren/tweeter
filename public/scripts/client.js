@@ -84,6 +84,8 @@ const data = [
   }
 ]
 
+renderTweets(data);
+
 
 
 /*Function to keep track of when tweets were created*/
