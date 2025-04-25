@@ -19,10 +19,9 @@ $(document).ready(function() {   //Select tweet form, listen for submit event
     $.post('/api/tweets', serializedData)        //Send serialized data to server through POST req
       .done(function(response) {
         console.log('Success!', response);
+        loadTweets();                            //Get and display all tweets
         
-        const $newTweet = createTweetElement(response); //Render tweet without reloading all tweets
-        $('#tweet-container').prepend($newTweet);       //Add (prepend) new tweet to top of tweet container
-        $('textarea').val('');                          //Clear textarea on success
+        $('textarea').val('');                   //Clear textarea on success
       })
       .fail(function(error) {
         console.error('Failed...', error);
