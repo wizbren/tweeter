@@ -44,7 +44,12 @@ $(document).ready(function() {   //Select tweet form, listen for submit event
   loadTweets();
 });
 
-
+/*Function to "escape" user input*/
+const escape = function(string) {
+  let div = document.createElement('div');          //Make empty <div> element
+  div.appendChild(document.createTextNode(string)); //Put input into it
+  return div.innerHTML;                             //Get the safe version of input
+}
 
 
 /*Function to build and return tweets*/
@@ -62,7 +67,7 @@ const createTweetElement = function(tweet) {
       </header>
 
       <section class="tweet-text">
-        ${tweet.content.text}
+        ${escape(tweet.content.text)}
       </section>
 
       <footer>
