@@ -16,11 +16,13 @@ $(document).ready(function() {   //Select tweet form, listen for submit event
 
     const serializedData = $(this).serialize();  //Serialize form data into query string
 
-    $.post('/api/tweets', serializedData)   //Send serialized data to server through POST req
+    $.post('/api/tweets', serializedData)        //Send serialized data to server through POST req
       .done(function(response) {
         console.log('Success!', response);
-        loadTweets();                       //Reload tweets after posting
-        $('textarea').val('');              //Clear textarea on success
+        
+        const $newTweet = createTweetElement(response); //Render tweet without reloading all tweets
+        $('#tweet-container').prepend($newTweet);       //Add (prepend) new tweet to top of tweet container
+        $('textarea').val('');                          //Clear textarea on success
       })
       .fail(function(error) {
         console.error('Failed...', error);
