@@ -6,6 +6,8 @@ $(document).ready(function() {   //Select tweet form, listen for submit event
     const maxText = 140;                    //Maximum characters allowed
     const $error = $('.error-message');
 
+    $error.slideUp();                       //Hide error message before validating
+
     if (tweetText === "") {                                     //Check for empty textarea
       $error.text("You can't send an empty tweet!").slideDown(); //Update and show text with animation
       return;                                                   //Prevents form submit
@@ -14,7 +16,6 @@ $(document).ready(function() {   //Select tweet form, listen for submit event
       $error.text("Your tweet is too long! 140 characters or less, please.").slideDown(); 
       return;                               //Prevents form submit
     }
-    $error.slideUp();
 
     const serializedData = $(this).serialize();  //Serialize form data into query string
 
