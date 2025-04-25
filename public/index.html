@@ -33,43 +33,46 @@
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
     <nav>
-      <span>TWEETER?!</span>
+      <span>TWEETER</span>
       <div class="write-a-tweet">
         <span>Write a new tweet</span>
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
-
-    <header style="margin-top: 120px;">    <!--To push content below fixed nav bar-->
-      <div>
-        <img src="/images/profile-hex.png">
-      </div>
-      <br>
-      <div>
-        <h2>Brendan Brown</h2>
-      </div>
-    </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h2>Write a Tweet</h2>
-        <div class="error-message">Error: Tweet must be between 1 and 140 characters</div>
-        <form action="/api/tweets" method="POST">
-          <label for="tweet-text">DOTH THOU WISHETH TO TWEET, M'LORD?</label>
-          <textarea name="text" id="tweet-text"></textarea>
+    
+    <div class="container">
+      <div id="left-column">
+        <header style="margin-top: 120px;"> <!-- Keeps same spacing under nav -->
           <div>
-            <button type="submit">TWEET</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <img src="/images/profile-hex.png">
           </div>
-        </form>
-      </section>
-      <section id="tweet-container">
+          <br>
+          <div>
+            <h2>Brendan Brown</h2>
+          </div>
+        </header>
+      </div>
 
-      </section>
-    </main>
+      <div id="right-column">
+        <main>
+          <section class="new-tweet">
+            <h2>Write a Tweet</h2>
+            <div class="error-message">Error: Tweet must be between 1 and 140 characters</div>
+            <form action="/api/tweets" method="POST">
+              <label for="tweet-text">Doth thou wisheth to tweet, m'lord?</label>
+              <textarea name="text" id="tweet-text"></textarea>
+              <div>
+                <button type="submit">TWEET</button>
+                <output name="counter" class="counter" for="tweet-text">140</output>
+              </div>
+            </form>
+          </section>
+          <section id="tweet-container">
+          </section>
+        </main>
+      </div>
+    </div>
     <script src="/scripts/composer-char-counter.js"></script>
   </body>
 </html>
