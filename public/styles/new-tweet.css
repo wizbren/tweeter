@@ -55,3 +55,9 @@
 .counter.over-limit {
   color: red;
 }
+
+.error-message {
+  color: crimson;
+  text-align: center;
+  display: none;              /*Message starts hidden*/
+}
