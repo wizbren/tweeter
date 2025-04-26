@@ -5,6 +5,6 @@ $(document).ready(function() {
     const remainingChars = maxChars - currentChars;
 
     $(this).siblings("div").find(".counter").text(remainingChars)
-      .toggleClass("over-limit", remainingChars < 0);    //Toggles class if char limit exceeded(?)
+      .toggleClass("over-limit", remainingChars < 0);    //Toggles class if char limit exceeded
   });
 });

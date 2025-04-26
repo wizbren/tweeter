@@ -12,9 +12,9 @@ $(document).ready(function() {   //Select tweet form, listen for submit event
       $error.text("You can't send an empty tweet!").slideDown(); //Update and show text with animation
       return;                                                   //Prevents form submit
     }
-    if (tweetText.length > maxText) {       //Checks if tweet is below 140 chars
+    if (tweetText.length > maxText) {                        //Checks if tweet is below 140 chars
       $error.text("Your tweet is too long! 140 characters or less, please.").slideDown(); 
-      return;                               //Prevents form submit
+      return;                                                //Prevents form submit
     }
 
     const serializedData = $(this).serialize();              //Serialize form data into query string
