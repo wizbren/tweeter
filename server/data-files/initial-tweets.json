@@ -20,5 +20,16 @@
       "text": "Je pense , donc je suis"
     },
     "created_at": 1736287135747
+  },
+  {
+    "user": {
+      "name": "Gandalf",
+      "avatars": "https://i.imgur.com/bOgiTH8.png",
+      "handle": "@theGrey"
+    },
+    "content": {
+      "text": "A wizard is never late, nor is he early. He arrives precisely when he means to."
+    },
+    "created_at": 1736287135747
   }
 ]
