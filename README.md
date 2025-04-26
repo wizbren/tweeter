@@ -21,6 +21,6 @@ It ain't pretty, but it works (so far).
 
 ### Screenshots
 
-![Screenshot 1](public/images/tweeter001.png)
-![Screenshot 2](public/images/tweeter002.png)
-![Screenshot 3](public/images/tweeter003.png)
+![Screenshot 1](docs/tweeter001.png)
+![Screenshot 2](docs/tweeter002.png)
+![Screenshot 3](docs/tweeter003.png)
