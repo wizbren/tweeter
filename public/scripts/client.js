@@ -17,14 +17,15 @@ $(document).ready(function() {   //Select tweet form, listen for submit event
       return;                               //Prevents form submit
     }
 
-    const serializedData = $(this).serialize();  //Serialize form data into query string
+    const serializedData = $(this).serialize();              //Serialize form data into query string
 
-    $.post('/api/tweets', serializedData)        //Send serialized data to server through POST req
+    $.post('/api/tweets', serializedData)                    //Send serialized data to server through POST req
       .done(function(response) {
         console.log('Success!', response);
-        loadTweets();                            //Get and display all tweets
+        loadTweets();                                        //Get and display all tweets
         
-        $('textarea').val('');                   //Clear textarea on success
+        $('textarea').val('');                               //Clear textarea on success
+        $('.counter').text('140');                           //Reset character counter
       })
       .fail(function(error) {
         console.error('Failed...', error);
