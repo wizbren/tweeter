@@ -30,3 +30,30 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ .container {
+  display: flex;           /*left and right columns side by side*/
+  margin: 140px auto 2em;  /*center element and add spacing below nav*/
+  padding: 0 1em;          /*small amount of padding inside container*/
+  gap: 2em;                /*space between the two columns*/
+ }
+
+ #left-column {
+  width: 30%;
+ }
+
+ #right-column {
+  width: 70%;
+ }
+
+ /*FOR SMALLER SCREENS*/
+ @media (max-width: 768px) {
+  .container {
+    flex-direction: column;   /*Stack columns past breakpoint*/
+    margin-top: 140px;
+  }
+  #left-column,
+  #right-column {
+    width: 100%;              /*Takes up full viewport when stacked*/
+  }
+ }
