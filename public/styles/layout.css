@@ -50,7 +50,7 @@ main {
  @media (max-width: 768px) {
   .container {
     flex-direction: column;   
-    margin-top: 140px;
+    margin-top: 20px;
   }
   #left-column,
   #right-column {
