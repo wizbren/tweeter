@@ -32,10 +32,10 @@ main {
  */
 
  .container {
-  display: flex;           /*left and right columns side by side*/
-  margin: 140px auto 2em;  /*center element and add spacing below nav*/
-  padding: 0 1em;          /*small amount of padding inside container*/
-  gap: 2em;                /*space between the two columns*/
+  display: flex;           
+  margin: 140px auto 2em;  
+  padding: 0 1em;          
+  gap: 2em;                
  }
 
  #left-column {
@@ -49,12 +49,12 @@ main {
  /*FOR SMALLER SCREENS*/
  @media (max-width: 768px) {
   .container {
-    flex-direction: column;   /*Stack columns past breakpoint*/
+    flex-direction: column;   
     margin-top: 140px;
   }
   #left-column,
   #right-column {
-    width: 100%;              /*Takes up full viewport when stacked*/
+    width: 100%;              
   }
  }
 
@@ -63,5 +63,24 @@ main {
     display: block;
     width: 100%;
     margin: 0 auto;
+  }
+ }
+
+ @media (max-width: 768px) {
+  #left-column header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #left-column header img {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 0.5em;
+  }
+
+  #left-column header h2 {
+    font-size: 1.2em;
   }
  }
