@@ -1,38 +1,37 @@
-$(document).ready(function() {   //Select tweet form, listen for submit event
+$(document).ready(function() {   
   
-  $('form').on('submit', function(event) {  //Halts default browser behaviour of reloading
-    event.preventDefault();                 //on form submission
-    const tweetText = $('textarea').val();  //Get tweet from textarea
-    const maxText = 140;                    //Maximum characters allowed
+  $('form').on('submit', function(event) {       
+    event.preventDefault();                 
+    const tweetText = $('textarea').val();  
+    const maxText = 140;                    
     const $error = $('.error-message');
 
-    $error.slideUp();                       //Hide error message before validating
+    $error.slideUp();                                   //Hide error message before validating
 
-    if (tweetText === "") {                                     //Check for empty textarea
-      $error.text("You can't send an empty tweet!").slideDown(); //Update and show text with animation
-      return;                                                   //Prevents form submit
+    if (tweetText === "") {                             //Validates tweet input
+      $error.text("You can't send an empty tweet!").slideDown(); 
+      return;                                                   
     }
-    if (tweetText.length > maxText) {                        //Checks if tweet is below 140 chars
-      $error.text("Your tweet is too long! 140 characters or less, please.").slideDown(); 
-      return;                                                //Prevents form submit
+    if (tweetText.length > maxText) {                   //Checks if tweet is below 140 chars
+      $error.text("Your tweet is too long! 140 characters or less.").slideDown(); 
+      return;                                                
     }
 
-    const serializedData = $(this).serialize();              //Serialize form data into query string
+    const serializedData = $(this).serialize();         //Serialize form data into query string
 
-    $.post('/api/tweets', serializedData)                    //Send serialized data to server through POST req
+    $.post('/api/tweets', serializedData)                  
       .done(function(response) {
-        console.log('Success!', response);
-        loadTweets();                                        //Get and display all tweets
         
-        $('textarea').val('');                               //Clear textarea on success
-        $('.counter').text('140');                           //Reset character counter
+        loadTweets();                                   //Get tweets after posting   
+        $('textarea').val('');                          //Clear textarea on success
+        $('.counter').text('140');                      //Reset character counter
       })
       .fail(function(error) {
         console.error('Failed...', error);
       })
   });
 
-  function loadTweets() {
+  function loadTweets() {                             
     $.ajax({
       url: '/api/tweets',
       method: 'GET',
@@ -45,18 +44,17 @@ $(document).ready(function() {   //Select tweet form, listen for submit event
       }
     })
   }
-  loadTweets();
+  loadTweets();                                         //Load when page is ready
 });
 
-/*Function to "escape" user input*/
-const escape = function(string) {
-  let div = document.createElement('div');          //Make empty <div> element
-  div.appendChild(document.createTextNode(string)); //Put input into it
-  return div.innerHTML;                             //Get the safe version of input
+
+const escape = function(string) {                       //Escape user input for XSS attack prevention
+  let div = document.createElement('div');              //Make empty <div> element
+  div.appendChild(document.createTextNode(string));     //Put input into it
+  return div.innerHTML;                                 //Get the safe version of input
 }
 
 
-/*Function to build and return tweets*/
 const createTweetElement = function(tweet) {
   const howLongAgo = timeago.format(tweet.created_at);
 
@@ -84,16 +82,16 @@ const createTweetElement = function(tweet) {
       </footer>
     </article>
   `);
-  return $tweet;      //Returns jQuery tweet element
+  return $tweet;     
 };
 
-/*Function to render tweets server-side, and then clear container*/
-const renderTweets = function(tweets) {
-  const $container = $('#tweet-container');           //Pulls what's written in tweet container
-  $container.empty();                                 //Clears input form
 
-  for (const tweet of tweets) {                       //Loops through tweet data
-    const $tweetElement = createTweetElement(tweet);  //Builds tweet element
+const renderTweets = function(tweets) {            
+  const $container = $('#tweet-container');           
+  $container.empty();                              //Clear container before making a new tweet      
+
+  for (const tweet of tweets) {                      
+    const $tweetElement = createTweetElement(tweet);  
     $container.prepend($tweetElement);
   }
 }
