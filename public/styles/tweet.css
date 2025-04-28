@@ -6,6 +6,10 @@
   background-color: lavender;
 }
 
+.tweet-text {
+  overflow-wrap: break-word;
+}
+
 .tweet header {
   all: unset;
   display: flex;
