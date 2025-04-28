@@ -1,8 +1,9 @@
 .tweet {
   border: 2px solid black;
   border-radius: 15px;
+  margin-bottom: 0.8em;
   padding: 0.8em;
-  background-color: palegoldenrod;
+  background-color: lavender;
 }
 
 .tweet header {
