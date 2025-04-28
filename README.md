@@ -4,12 +4,22 @@ Tweeter is a simple, single-page Twitter clone.
 
 This version of Tweeter was built by Brendan Brown, and will serve
 as a running project that he'll continue to add to and improve on.
-It ain't pretty, but it works (so far).
 
 
-"End? No, the journey doesn't end here. Death (project submission) is just another path, one that we all must take. The grey rain-curtain of this world rolls back, and all turns to silver glass, and then you see it." 
+## Getting Started
 
--Gandalf
+1. Clone the Repository & Install Dependencies.
+
+- git clone https://github.com/wizbren/tweeter.git
+- cd tweeter
+- npm install
+
+2. Run Project Locally.
+
+- npm run local
+
+3. Visit http://localhost:8080/ in your browser.
+
 
 ## Dependencies
 
@@ -24,3 +34,11 @@ It ain't pretty, but it works (so far).
 ![Screenshot 1](docs/tweeter001.png)
 ![Screenshot 2](docs/tweeter002.png)
 ![Screenshot 3](docs/tweeter003.png)
+
+
+### NOTES
+
+"npm run local" uses nodemon to automatically restart the server when changes are made to the code.
+
+If you don't already have nodemon installed, run the following command:
+ - npm install -g nodemon
