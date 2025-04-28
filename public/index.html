@@ -43,7 +43,7 @@
     
     <div class="container">
       <div id="left-column">
-        <header style="margin-top: 120px;">       <!-- Keeps same spacing under nav -->
+        <header> 
           <div>
             <img src="images/wizard-avatar.png">
           </div>
@@ -60,7 +60,7 @@
             <h2>Write a Tweet</h2>
             <div class="error-message">Error: Tweet must be between 1 and 140 characters</div>
             <form action="/api/tweets" method="POST">
-              <label for="tweet-text">Doth thou wisheth to tweet, m'lord?</label>
+              <label for="tweet-text">What's on your mind?</label>
               <textarea name="text" id="tweet-text"></textarea>
               <div>
                 <button type="submit">TWEET</button>
