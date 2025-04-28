@@ -6,13 +6,13 @@ nav {
   width: 100%;
   background-color: #4056A1;
   color: #FFFFFF;
-  padding-left: 1.5em;             /*Could combine into <padding: 0 1.5em for DRYness*/
+  padding-left: 1.5em;             
   padding-right: 1.5em;
   font-family: 'Bungee', sans-serif;
 
-  display: flex;                   /*Sets nav bar elements side-by-side, instead of vertically stacked*/
+  display: flex;                   
   align-items: center;
-  justify-content: space-between;  /*Pushes "TWEETER" and "Write a New Tweet" to opposite sides*/
+  justify-content: space-between;  
 }
 
 .write-a-tweet {
